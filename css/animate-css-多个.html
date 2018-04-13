@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body,html{
+        	height: 100%;
+        	overflow: hidden;
+        }
+        .box{
+        	height: 100%;
+        	margin: 0 3%;
+        	padding: 20px 0;
+        	display: flex;
+        	position: relative;
+        	flex-direction: column;
+        }
+
+        .demo {
+        	background: url(bg.png) center center / cover no-repeat;
+            width: 200px;
+            height: 200px;
+            margin: 10px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 3px rgba(0,0,0,.4);
+        }
+
+        .list{
+        	overflow-y: scroll;
+        	flex: 1;
+        	margin-bottom: 100px;
+        	box-sizing: border-box;
+        }
+
+        .list dd {
+            float: left;
+            padding: .3em .5em;
+            background-color: deepskyblue;
+            border: solid 1px deepskyblue;
+            color: #FFF;
+            border-radius: 3px;
+            margin: 4px;
+            font-size: 16px;
+        }
+        .list dt{
+            clear: both;
+            padding: .3em .5em;
+            border-left: solid 2px deepskyblue;
+            margin: 4px;
+        }
+        .list dd:hover{
+        	background-color: #fff;
+        	color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    	<div class="demo animated"></div>
+	    <ul class="list">
+	        <dt>Attention Seekers - 推荐</dt>
+	        <dd data-class="bounce">bounce - 弹性坠落</dd>
+	        <dd data-class="flash">flash - 闪烁</dd>
+	        <dd data-class="pulse">pulse - 缓慢放大再还原</dd>
+	        <dd data-class="rubberBand">rubberBand - 欢乐（伸缩弹回）</dd>
+	        <dd data-class="shake">shake - 左右晃动</dd>
+	        <dd data-class="swing">swing - 顶部固定摇晃</dd>
+	        <dd data-class="tada">tada - tada？这个怎么形容呢？反正很好玩</dd>
+	        <dd data-class="jello">jello - 弹性扭曲</dd>
+	        <dd data-class="wobble">wobble - 左右摇晃</dd>
+			<dt>Bouncing Entrances - 弹跳（跳跳）效果 - 进入</dt>
+			<dd data-class="bounceIn">bounceIn - 中心弹入</dd>
+			<dd data-class="bounceInDown">bounceInDown - 从上至下探入</dd>
+			<dd data-class="bounceInLeft">bounceInLeft - 从左侧进入</dd>
+			<dd data-class="bounceInRight">bounceInRight - 从右侧进入</dd>
+			<dd data-class="bounceInUp">bounceInUp - 从下侧进入</dd>
+			<dt>Bouncing Exits - 弹跳（跳跳）效果 - 退出</dt>
+			<dd data-class="bounceOut">bounceOut - 中心退出</dd>
+			<dd data-class="bounceOutDown">bounceOutDown - 向下退出</dd>
+			<dd data-class="bounceOutLeft">bounceOutLeft - 向左退出</dd>
+			<dd data-class="bounceOutRight">bounceOutRight - 向右退出</dd>
+			<dd data-class="bounceOutUp">bounceOutUp - 向上退出</dd>
+			<dt>Fading Entrances - 淡入</dt>
+			<dd data-class="fadeIn">fadeIn - 原地淡入</dd>
+			<dd data-class="fadeInDown">fadeInDown - 从上淡入</dd>
+			<dd data-class="fadeInDownBig">fadeInDownBig - 从上淡入距离大</dd>
+			<dd data-class="fadeInLeft">fadeInLeft - 从左淡入</dd>
+			<dd data-class="fadeInLeftBig">fadeInLeftBig - 从左淡入距离大</dd>
+			<dd data-class="fadeInRight">fadeInRight - 从右侧淡入</dd>
+			<dd data-class="fadeInRightBig">fadeInRightBig - 从右侧淡入距离大</dd>
+			<dd data-class="fadeInUp">fadeInUp - 从下淡入</dd>
+			<dd data-class="fadeInUpBig">fadeInUpBig - 从下淡入距离大</dd>
+			<dt>Fading Exits - 淡出</dt>
+			<dd data-class="fadeOut">fadeOut - 原地淡出</dd>
+			<dd data-class="fadeOutDown">fadeOutDown - 向上淡出</dd>
+			<dd data-class="fadeOutDownBig">fadeOutDownBig - 向上淡出距离大</dd>
+			<dd data-class="fadeOutLeft">fadeOutLeft - 向左淡出</dd>
+			<dd data-class="fadeOutLeftBig">fadeOutLeftBig - 向左淡出距离大</dd>
+			<dd data-class="fadeOutRight">fadeOutRight - 向右淡出</dd>
+			<dd data-class="fadeOutRightBig">fadeOutRightBig - 向右淡出距离大</dd>
+			<dd data-class="fadeOutUp">fadeOutUp - 向上淡出</dd>
+			<dd data-class="fadeOutUpBig">fadeOutUpBig - 向上淡出距离大</dd>
+			<dt>Sliding Entrances - 滑动进入</dt>	
+			<dd data-class="slideInDown">slideInDown</dd>
+			<dd data-class="slideInLeft">slideInLeft</dd>
+			<dd data-class="slideInRight">slideInRight</dd>
+			<dd data-class="slideInUp">slideInUp</dd>
+			<dt>Sliding Exits - 滑动退出</dt>	
+			<dd data-class="slideOutDown">slideOutDown</dd>
+			<dd data-class="slideOutLeft">slideOutLeft</dd>
+			<dd data-class="slideOutRight">slideOutRight</dd>
+			<dd data-class="slideOutUp">slideOutUp</dd>
+			<dt>Flippers - 翻转</dt>	
+			<dd data-class="flipInX">flipInX - X轴翻转</dd>
+			<dd data-class="flipInY">flipInY - Y轴翻转</dd>
+			<dd data-class="flipOutX">flipOutX - X轴转出</dd>
+			<dd data-class="flipOutY">flipOutY - Y轴转出</dd>
+			<dt>Lightspeed - 光速</dt>	
+			<dd data-class="lightSpeedIn">lightSpeedIn - 光速进入</dd>
+			<dd data-class="lightSpeedOut">lightSpeedOut - 光速退出</dd>
+			<dt>Rotating Entrances - 翻转（转入）</dt>	
+			<dd data-class="rotateIn">rotateIn</dd>
+			<dd data-class="rotateInDownLeft">rotateInDownLeft</dd>
+			<dd data-class="rotateInDownRight">rotateInDownRight</dd>
+			<dd data-class="rotateInUpLeft">rotateInUpLeft - 由</dd>
+			<dd data-class="rotateInUpRight">rotateInUpRight</dd>
+			<dt>Rotating Exits - 转出</dt>
+			<dd data-class="rotateOut">rotateOut</dd>
+			<dd data-class="rotateOutDownLeft">rotateOutDownLeft</dd>
+			<dd data-class="rotateOutDownRight">rotateOutDownRight</dd>
+			<dd data-class="rotateOutUpLeft">rotateOutUpLeft</dd>
+			<dd data-class="rotateOutUpRight">rotateOutUpRight</dd>
+			<dt>Specials - 欢乐</dt>	
+			<dd data-class="hinge">hinge</dd>
+			<dd data-class="rollIn">rollIn</dd>
+			<dd data-class="rollOut">rollOut</dd>
+			<dt>Zoom Entrances - 缩放进入</dt>
+			<dd data-class="zoomIn">zoomIn</dd>
+			<dd data-class="zoomInDown">zoomInDown</dd>
+			<dd data-class="zoomInLeft">zoomInLeft</dd>
+			<dd data-class="zoomInRight">zoomInRight</dd>
+			<dd data-class="zoomInUp">zoomInUp</dd>
+			<dt>Zoom Entrances - 缩放退出</dt>
+			<dd data-class="zoomOut">zoomOut</dd>
+			<dd data-class="zoomOutDown">zoomOutDown</dd>
+			<dd data-class="zoomOutLeft">zoomOutLeft</dd>
+			<dd data-class="zoomOutRight">zoomOutRight</dd>
+			<dd data-class="zoomOutUp">zoomOutUp</dd>
+	    </ul>
+	    </div>
+
+
+    <script>
+        var oBox = document.querySelector('.demo');
+        var add = document.querySelectorAll('.list dd');
+        oBox.oldClass = oBox.className;
+
+        for (var i = 0; i < add.length; i++) {
+            add[i].onclick = function() {
+                oBox.className = oBox.oldClass;
+                var _this = this;
+                setTimeout(function(){
+                    oBox.className = oBox.oldClass + ' ' + _this.getAttribute('data-class');
+                },10)
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
